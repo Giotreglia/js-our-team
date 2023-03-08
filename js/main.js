@@ -19,7 +19,14 @@ let teamList = [
     { nome: "Barbara Ramos", posizione: "Graphic Designer", foto: "barbara-ramos-graphic-designer.jpg" },
 ];
 
-console.log(teamList);
+// Stampo le informazioni
 
+for (let i = 0; i < teamList.length; i++) {
 
+    const teamMemberCorrente = teamList[i];
+
+    for (const key in teamMemberCorrente) {
+        console.log(key + ': ' + teamMemberCorrente[key]);
+    }
+}
 
