@@ -27,10 +27,11 @@ let teamList = [
 for (let i = 0; i < teamList.length; i++) {
     
     let teamMemberCorrente = teamList[i];
+    console.log(teamMemberCorrente);
 
     for (const key in teamMemberCorrente) {
-        teamMember = (key + ': ' + teamMemberCorrente[key]);
-        teamContainerDom.innerHTML = teamMember;
+        teamMember = (key + ': ' + teamMemberCorrente[key] + ' /');
+        teamContainerDom.innerHTML += teamMember;
     }
 
 }
