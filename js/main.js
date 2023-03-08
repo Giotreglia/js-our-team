@@ -8,6 +8,9 @@ nome, ruolo e foto.
 
 */
 
+// Riferimenti al DOM
+const teamContainerDom = document.getElementById('team-container');
+
 // Creo lista membri del team
 
 let teamList = [
@@ -22,11 +25,36 @@ let teamList = [
 // Stampo le informazioni
 
 for (let i = 0; i < teamList.length; i++) {
-
-    const teamMemberCorrente = teamList[i];
+    
+    let teamMemberCorrente = teamList[i];
 
     for (const key in teamMemberCorrente) {
-        console.log(key + ': ' + teamMemberCorrente[key]);
+        teamMember = (key + ': ' + teamMemberCorrente[key]);
+        teamContainerDom.innerHTML = teamMember;
     }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Creo le card 
+function cardGenerator() {
+    const card = document.createElement('div');
+    card.classList.add('card');
+}
+
+
+
+
 
