@@ -24,16 +24,23 @@ let teamList = [
 
 // Stampo le informazioni
 
+let teamMemberNome;
+let teamMemberPosition;
+let teamMemberImage;
+
 for (let i = 0; i < teamList.length; i++) {
     
-    let teamMemberCorrente = teamList[i];
-    console.log(teamMemberCorrente);
+    teamMemberCorrente = teamList[i];
 
-    for (const key in teamMemberCorrente) {
-        teamMember = (key + ': ' + teamMemberCorrente[key] + ' /');
-        teamContainerDom.innerHTML += teamMember;
-    }
+    teamMemberNome = teamMemberCorrente.nome;
+    teamMemberPosition = teamMemberCorrente.posizione;
+    teamMemberImage = teamMemberCorrente.foto;
 
+    let card = cardGenerator();
+    card.innerHTML += `<div class="img-container"><img class="member-img" src="img/${teamMemberImage}" alt="${teamMemberNome}"></div>`;
+    card.innerHTML += `<h3 class="name">${teamMemberNome}</h3>`;
+    card.innerHTML += `<span class="position">${teamMemberPosition}</span>`;
+    teamContainerDom.append(card);
 }
 
 
@@ -53,7 +60,10 @@ for (let i = 0; i < teamList.length; i++) {
 function cardGenerator() {
     const card = document.createElement('div');
     card.classList.add('card');
+    return card;
 }
+
+
 
 
 
