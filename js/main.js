@@ -23,7 +23,7 @@ let teamList = [
     { nome: "Barbara Ramos", posizione: "Graphic Designer", foto: "barbara-ramos-graphic-designer.jpg" },
 ];
 
-// Stampo le informazioni
+// Creo le card con le informazioni dei membri
 
 let teamMemberNome;
 let teamMemberPosition;
@@ -78,7 +78,7 @@ addButtonDom.addEventListener('click',
 
 
 
-
+// FUNZIONI
 
 // Creo le card 
 function cardGenerator() {
