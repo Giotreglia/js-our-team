@@ -10,6 +10,7 @@ nome, ruolo e foto.
 
 // Riferimenti al DOM
 const teamContainerDom = document.getElementById('team-container');
+const addButtonDom = document.getElementById('add-member');
 
 // Creo lista membri del team
 
@@ -43,8 +44,31 @@ for (let i = 0; i < teamList.length; i++) {
     teamContainerDom.append(card);
 }
 
+// Creo tasto per aggiunta membro da input
 
+let newName;
+let newPosition;
+let newImage;
 
+addButtonDom.addEventListener('click',
+    function() {
+
+        newName = document.getElementById('add-name').value;
+        newPosition = document.getElementById('add-position').value;
+        newImage = document.getElementById('add-img').value;
+
+        let card = cardGenerator();
+        card.innerHTML += `<div class="img-container"><img class="member-img" src="${newImage}" alt="${newName}"></div>`;
+        card.innerHTML += `<h3 class="name">${newName}</h3>`;
+        card.innerHTML += `<span class="position">${newPosition}</span>`;
+        teamContainerDom.append(card);
+
+        newName.innerHTML = "";
+        newPosition.innerHTML = "";
+        newImage.innerHTML = "";
+        
+    }
+    );
 
 
 

@@ -65,6 +65,41 @@ html {
     scale: 1.05;
 }
 
+#add-member {
+    text-align: right;
+    font-size: 40px;
+    font-weight: bold;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.add-container {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 20px;
+    height: 80px;
+    padding-right: 85px;
+    margin-top: 30px;
+}
+
+.add-container h3 {
+    font-size: 30px;
+    padding-top: 30px;
+}
+
+.add-form {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+label {
+    font-weight: bold;
+}
 
 /*RESPONSIVE*/
 
