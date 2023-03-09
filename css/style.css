@@ -10,8 +10,9 @@ html {
 }
 
 #title {
-    font-size: 60px;
+    font-size: 90px;
     margin-left: 85px;
+    margin-top: 100px;
 }
 
 .container {
@@ -29,9 +30,10 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width: calc(100% / 3 - 20px);
+    width: 100%;
     text-align: center;
     margin: 10px;
+    padding-bottom: 10px;
     border-radius: 10px;
     overflow: hidden; 
     cursor: pointer;
@@ -45,18 +47,56 @@ html {
 }
 
 .member-img {
-    height: 100%;  
+    width: 100%;  
 }
 
 .name {
-    margin: 10px 0 5px;
+    margin: 20px 0 5px;
+    font-size: 50px;
 }
 
 .position {
     color: grey;
     font-size: 0.9rem;
+    font-size: 35px;
 }
 
 .member-img:hover {
     scale: 1.05;
 }
+
+
+/*RESPONSIVE*/
+
+@media screen and (min-width: 576px) {
+    .card {
+        width: calc(100% / 2 - 20px);
+    }
+
+    .name {
+        font-size: 30px;
+    }
+
+    .position {
+        font-size: 24px;
+    }
+
+    
+}
+
+@media screen and (min-width: 992px) {
+    .card {
+        width: calc(100% / 3 - 20px);
+    }
+
+    .name {
+        font-size: 20px;
+    }
+
+    .position {
+        font-size: 15px;
+    }
+
+    
+}
+
