@@ -40,7 +40,7 @@ html {
     overflow: hidden; 
     cursor: pointer;
     box-shadow: 10px 10px black;
-    border: solid 1px black;
+    border: solid 5px rgb(255, 198, 41);
 }
 
 .img-container {
@@ -107,6 +107,10 @@ html {
 
 label {
     font-weight: bold;
+}
+
+.yellow {
+    color: rgb(255, 198, 41);
 }
 
 /*RESPONSIVE*/
